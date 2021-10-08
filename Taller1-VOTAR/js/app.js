@@ -13,10 +13,18 @@ fecNac.addEventListener('change', CalcularConFechaNac)
 function ValidarVoto(){
     let nomUsuario= nombre.value;
     let edadUsuario= edad.value;
-    if (edadUsuario > 17){
+    if (edadUsuario >= 18){
+        iconoerror.classList.remove('activo')
+        iconoerror.classList.add('oculto')
+        iconoexito.classList.remove('oculto')
+        iconoexito.classList.add('activo')
         mensaje.textContent  = `Señor ${nomUsuario}, Puede votar su edad es ${edadUsuario}`
     }
     else{
+        iconoexito.classList.remove('activo')
+        iconoexito.classList.add('oculto')
+        iconoerror.classList.remove('oculto')
+        iconoerror.classList.add('activo')
         mensaje.textContent  = `Señor ${nomUsuario}, No puede votar su edad es ${edadUsuario}`
     }
     
@@ -39,24 +47,16 @@ function CalcularConFechaNac(e){
     let mesActual = date.getMonth()
     let annioActual =  date.getFullYear()
 
-    let diasUsuario =  diaActual - fechaNacUsuario[1]
+    let diasUsuario =  diaActual - fechaNacUsuario[2]
     let mesUsuario =  mesActual - fechaNacUsuario[1]
     let anniosUsuario = annioActual - fechaNacUsuario[0]
 
     if (anniosUsuario >= 18){
         edad.setAttribute('value', `${anniosUsuario}`)
-        iconoerror.classList.remove('activo')
-        iconoerror.classList.add('oculto')
-        iconoexito.classList.remove('oculto')
-        iconoexito.classList.add('activo')
         ValidarVoto();
     }
     else{
         edad.setAttribute('value', `${anniosUsuario}`)
-        iconoexito.classList.remove('activo')
-        iconoexito.classList.add('oculto')
-        iconoerror.classList.remove('oculto')
-        iconoerror.classList.add('activo')
         ValidarVoto();
     }
     console.log("Dias: " + diasUsuario,"Meses: " + mesUsuario, "annios" + anniosUsuario) // Este Console Log es para saber si estan bien los parametros de la fecha
