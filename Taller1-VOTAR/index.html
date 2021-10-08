@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Sistema de Votación</title>
+</head>
+<body>
+    <secciton class="container">
+        <h1>Sistema de validacion para Votación</h1>
+        <div class="datos">
+            <label class="label">Nombre</label>
+            <input class="nombre" type="text" name="" id="nombre" placeholder="Nombre">
+            <label class="label">Edad</label>
+            <input class="edad" type="number" name="" value="0" id="edad" placeholder="Edad" min="0" max="150">
+            <label class="label">Fecha Nacimiento</label>
+            <input class="edad" type="date" name="" value="" id="fecnac">
+            <button class="boton" id="btn-enviar">Validar</button>
+            <div class="contMensaje">
+                <span class="icono oculto" id="iconoexito"><i class="fas fa-check-circle"></i></span>
+                <span class="icono oculto" id="iconoerror"><i class="fas fa-exclamation-circle"></i></span>
+                <p class="mensaje" id="mensaje"></p>
+            </div>
+        </div>
+    </secciton>
+    <script src="./js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    align-items: center;
+    background-color: aquamarine;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
+.container{
+    align-items: center;
+    background-color: #34495e;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.container h1{
+    color: white;
+    padding: 1em;
+    font-size: 2em;
+    text-align: center;
+}
+
+.datos{
+    align-items: center;
+    background-color: #16a085;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5em 0.5em;
+    width: 90%;
+}
+
+.label{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    padding: 10px 0 10px 0;
+}
+
+.datos input{
+    border-style: none;
+    border-radius: 7px;
+    font-size: 18px;   
+    padding: 0.5rem;
+    width: 80%;
+}
+
+.datos input::placeholder{
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+.boton{
+    border-style: none;
+    border-radius: 7px;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+    padding: 0.5em;
+    width: 80%;
+}
+
+.contMensaje{
+    background-color: #ecf0f1;
+    border-radius: 1rem;
+    font-style: oblique;
+    font-weight: bold;
+    margin-top: 30px;
+    padding: 1rem;
+}
+
+.icono{
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.activo{
+    display: flex;
+}
+
+.oculto{
+    display: none;
+}
