@@ -31,10 +31,16 @@ function ValidarVoto(){
 }
 
 function TeclaEnter(e){
-    tecla = e.keyCode
+    let tecla = e.keyCode
     if (tecla == 13){
         ValidarVoto();
     }
+}
+
+//Funcion alternativa con oprador ternario para Enter
+function Enter(e){
+    let tecla = e.keyCode
+    let validacion = tecla == 13 ? ValidarVoto() : "Hola"
 }
 
 function CalcularConFechaNac(e){
@@ -59,6 +65,6 @@ function CalcularConFechaNac(e){
         edad.setAttribute('value', `${anniosUsuario}`)
         ValidarVoto();
     }
-    console.log("Dias: " + diasUsuario,"Meses: " + mesUsuario, "annios" + anniosUsuario) // Este Console Log es para saber si estan bien los parametros de la fecha
+    console.log("Dias: " + diasUsuario,"\nMeses: " + mesUsuario, "\nannios: " + anniosUsuario) // Este Console Log es para saber si estan bien los parametros de la fecha
 }
 
